@@ -4,6 +4,7 @@ from event2_Lunch import *
 from homework_event import *
 from gohome import *
 from student import escape
+from time import sleep
 
 boss, students = login()
 avg_ability = make_avgdict(students)
@@ -11,8 +12,12 @@ finish = True
 week = 1
 
 print("\n\n------안녕하세요. '{0}'의 피로 키우기에 오신것을 환영합니다.------##\n" .format(boss.b_name))
-print("##{0}님은 28명의 피로그래밍12기를 8주 동안 낙오자없이 데려가야합니다.##\n"
-      "##학생들이 '{0}님을 잘 따를 수 있도록 리더십을 발휘하세요!".format(boss.b_name))
+sleep(1)
+print("## {0}님은 28명의 피로그래밍12기를 8주 동안 낙오자없이 데려가야합니다. ## ".format(boss.b_name))
+sleep(1)
+print("## 학생들이 '{0}님을 잘 따를 수 있도록 리더십을 발휘하세요! ##".format(boss.b_name))
+sleep(1)
+
 print('''
 \t\t\t\t\t       ___
 \t\t\t\t\t    \( ○-○ )/
@@ -35,11 +40,14 @@ while finish:
         select = input('입력: ')
         if select == '0':
             finish = False
-            print("P'rogramming 12th 종료!")
-            ending(boss, students)
+            print("\n'{}'님이 {}주차 도중 도망쳤습니다.ㅠㅠㅠㅠㅠㅠㅠ".format(boss.b_name, week))
+            sleep(1)
+            print('학생들: {}가 우릴 버렸어...'.format(boss.b_name))
+            sleep(1)
+            print("\nP'rogramming 12th 종료!")
             break
         elif select == '1':
-            learn(boss, students)
+            learn(students)
         elif select == '2':
             lunch(boss, students)
         elif select == '3':

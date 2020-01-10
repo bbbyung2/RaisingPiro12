@@ -131,6 +131,9 @@ def gohome(boss, students, avg_passion):
 
     # 커맨드 3
     elif command == '3':
+      if boss.b_fatigue >= 70:
+        print('성모는 지금 너무 피곤하다. 얘기할 기력도 없다.\n')
+        continue
       print("회장님 : 여러분 제가 재밌는 얘기를 해드리겠습니다!! 제가 LA에 있었을 때...")
       print('(이야기중...)')
       time.sleep(3)
@@ -175,7 +178,7 @@ def view_student(students, week):
       print("|", students[a * 4 + j].st_name, "|", end=' ')
     if b != 0:
       for k in range(4 - b):
-        print('|        |')
+        print('|        |', end=' ')
     for k in range(c):
       print(" --------   --------   --------   --------")
       print("|        | |        | |        | |        |")

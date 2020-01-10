@@ -63,9 +63,18 @@ while finish:
         break
     escape(students)
     week += 1
+
+    if len(students) <= 0:
+        print("모든 12기가 탈주했습니다...")
+        sleep(1)
+        print("회장님: 내가 능력부족이라니!!!!")
+        sleep(1)
+        break
     avg_ability = make_avgdict(students)
     view_student(students, week)
     if week > 8:
         print("P'rogramming 12th 종료!")
         ending(boss, students)
         break;
+
+

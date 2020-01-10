@@ -5,7 +5,7 @@ from student import *
 def login():
     students = []
     f = open("st_name.txt", 'r', encoding='UTF8')
-    make_boss = boss(input())
+    make_boss = boss(input('LOGIN ID: '))
     for i in range(28):
         st_read = f.readline()
         students.append(student(st_read.rstrip('\n')))

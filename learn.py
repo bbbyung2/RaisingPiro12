@@ -22,7 +22,7 @@ def learn(boss, students):
 
 # learn의 datail action
 def online_lec(students):
-    print("인강 듣자")
+    print("회장님: 인강 듣자")
     index = sample(list(range(len(students))), randint(1, len(students)))
     for i in index:
         students[i].st_coding += 10
@@ -34,7 +34,7 @@ def online_lec(students):
 
 def offline_lec(students, d_teacher):# 누구의 강의인지에 따라 학생들의 능력치 변화
     if d_teacher == '장용석':
-        print('(웅성웅성){} 강사님 잘생겼다~~'.format(d_teacher))
+        print('학생들: (웅성웅성){} 강사님 잘생겼다~~'.format(d_teacher))
         index = sample(list(range(len(students))), randint(1, len(students)))
         for i in index:
             students[i].st_coding += 8
@@ -50,7 +50,7 @@ def offline_lec(students, d_teacher):# 누구의 강의인지에 따라 학생�
             students[i].st_humanity -= 2
             students[i].st_passion += 4
     elif d_teacher == '몰랑이는 귀여워':
-        print('앗, 저분은 질문방의 몰랑이...귀여워')
+        print('학생들: 앗, 저분은 질문방의 몰랑이...귀여워')
         index = sample(list(range(len(students))), randint(1, len(students)))
         for i in index:
             students[i].st_coding += 20
@@ -60,7 +60,7 @@ def offline_lec(students, d_teacher):# 누구의 강의인지에 따라 학생�
 
 
 def follow_boss(students):
-    print("저를 따라해보세요~여기보세요~")
+    print("회장님: 저를 따라해보세요~여기보세요~")
     index = sample(list(range(len(students))), randint(1, len(students)))
     for i in index:
         students[i].st_coding += 5

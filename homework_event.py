@@ -1,4 +1,5 @@
 import random
+import time
 
 def homework(students):
     count = 0  # 과제 낸 횟수
@@ -22,11 +23,11 @@ def homework(students):
 
 def self_homework(students, fatigue):
     n = random.sample(range(len(students)), random.randint(1, len(students)))  # 누구 학생으로 할지
-    print('---------------------------------------------')
-    print('회장님: 여러분 여기 봐주세요ヾ(＾∇＾)/\n\t   오늘 엄청 간단한 개인과제가 주어질 예정입니다!')
+    print('\n\n회장님: 여러분 여기 봐주세요ヾ(＾∇＾)/\n\t   오늘 엄청 간단한 개인과제가 주어질 예정입니다!')
+    time.sleep(1)
     print('학생들: ㅠㅠ')
-    print('---------------------------------------------')
-    print('<개인과제하는 사람>')
+    time.sleep(1)
+    print('\n<개인과제하는 사람>')
     for i in n:
         print(students[i].st_name)
         students[i].st_coding += 20  # coding 20 rise
@@ -38,11 +39,11 @@ def self_homework(students, fatigue):
 
 def team_homework(students, fatigue):
     n = random.sample(range(len(students)), random.randint(1, len(students)))
-    print('---------------------------------------------')
-    print('회장님: 여러분! 저기요??( ﾟ▽ﾟ)/\n\t   오늘 드디어 기다리던 팀플 과제가 있는 날입니다!')
+    print('\n\n회장님: 여러분! 저기요??( ﾟ▽ﾟ)/\n\t   오늘 드디어 기다리던 팀플 과제가 있는 날입니다!')
+    time.sleep(1)
     print('학생들: （○Ａ○）;;')
-    print('---------------------------------------------')
-    print('<팀플과제하는 사람>')
+    time.sleep(1)
+    print('\n<팀플과제하는 사람>')
     for i in n:
         print(students[i].st_name)
         students[i].st_coding += 40  # coding 40 rise

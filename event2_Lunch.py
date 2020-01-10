@@ -4,12 +4,13 @@ import random
 
 '''1. 학식 2. 배달음식 3. 굶기'''
 
-def lunch(students):
+def lunch(boss, students):
     print('오늘 점심은 뭘 먹이지?...')
     while(True):
-        choice = int(input('1. 학식  2. 배달  3. 굶자\n'))
+        print('(1) 학식    (2) 배달    (3) 굶자\n')
+        choice = int(input('입력: '))
         print('------------------------------------------------')
-        if choice == 1 :
+        if choice == 1:
             lunch_cafeteria(students)
             break
         elif choice == 2:
@@ -19,7 +20,7 @@ def lunch(students):
             lunch_no(students)
             break
         else:
-            '다시 생각해보자 성모야'
+            print('다시 생각해보자 {0}야'.format(boss.b_name))
 
 
 def lunch_cafeteria(students) :

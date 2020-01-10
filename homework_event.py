@@ -4,14 +4,16 @@ def homework(students):
     count = 0  # 과제 낸 횟수
     while True:
         common_fatigue = 0
-        x = int(input('1. 개인과제  2. 팀플과제 :'))
+        print('(1) 개인과제    (2) 팀플과제')
+        x = int(input('입력: '))
         if x == 1:
             common_fatigue = 20 + count*5
             self_homework(students, common_fatigue)
         elif x == 2:
             common_fatigue = 30 + count*5
             team_homework(students, common_fatigue)
-        y = int(input('1. 과제 이제 그만  2. 과제 한번 더 가즈아 :'))
+        print('(1) 과제 이제 그만    (2) 과제 한번 더 가즈아')
+        y = int(input('입력: '))
         if y == 1:
             break
         elif y == 2:  # 과제를 더 낼 때마다 피로도 +5

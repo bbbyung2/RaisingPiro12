@@ -1,17 +1,15 @@
 from login import *
+from learn import *
+from event2_Lunch import *
+from homework_event import *
 
 boss, students = login()
 avg_ability = make_avgdict(students)
 finish = True
 
-index = {
-    '1': None,
-    '2': None,
-    '3': None,
-    '4': None
-}
 
-print('------안녕하세요. {0}의 피로 키우기에 오신것을 환영합니다.------' .format(boss.b_name))
+
+print('\n\n------안녕하세요. {0}의 피로 키우기에 오신것을 환영합니다.------' .format(boss.b_name))
 while finish:
     select = 0
 
@@ -19,8 +17,16 @@ while finish:
     select = input('입력: ')
     if select == '0':
         break
-    index[select]
-
+    elif select == '1':
+        learn(boss, students)
+    elif select == '2':
+        lunch(boss, students)
+    elif select == '3':
+        homework(students)
+    elif select == '4':
+        pass
+    else:
+        print('ERROR: 잘못된 번호를 선택하였습니다.')
 
 
 

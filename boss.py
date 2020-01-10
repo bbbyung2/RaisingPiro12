@@ -4,4 +4,4 @@ class boss:
         self.b_leadership = 100
         self.b_passion = 100
         self.b_anger = 100
-        self.b_fatigue = 100
+        self.b_fatigue = 0

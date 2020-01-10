@@ -1,5 +1,6 @@
 import random
 import time
+from student import *
 
 def gohome(boss, students, avg_passion):
   print('귀가를 선택했습니다.')
@@ -71,6 +72,7 @@ def gohome(boss, students, avg_passion):
       for i in range(len(students)):
         students[i].st_fatigue -= 5
       print('학생들은 귀가를 해서 피로도가 5 감소했습니다')
+      return avg_passion
 
     # 정시에 보내기
     elif command == '2':
@@ -152,3 +154,58 @@ def gohome(boss, students, avg_passion):
     else:
       print('삐빅!! 정신차리세요!! 다시 입력하세요!!')
       return avg_passion
+
+
+def view_student(students, week):
+    a = len(students) // 4
+    b = len(students) % 4
+    c = (28 - len(students)) // 4
+    print()
+    print(" {}주차".format(week), "남은 학생 수:", len(students))
+    print()
+    for i in range(a):
+      print(" --------   --------   --------   --------")
+      print("|", students[4 * i].st_name, "|", end=' ')
+      print("|", students[4 * i + 1].st_name, "|", end=' ')
+      print("|", students[4 * i + 2].st_name, "|", end=' ')
+      print("|", students[4 * i + 3].st_name, "|", end=' ')
+      print()
+    print(" --------   --------   --------   --------")
+    for j in range(b):
+      print("|", students[a * 4 + j].st_name, "|", end=' ')
+    if b != 0:
+      for k in range(4 - b):
+        print('|        |')
+    for k in range(c):
+      print(" --------   --------   --------   --------")
+      print("|        | |        | |        | |        |")
+    if c != 0:
+      print(" --------   --------   --------   --------")
+
+    print('\n\n')
+
+
+
+
+
+def ending(boss, students):
+    ability_coding = 0
+    for member in students:
+        ability_coding += member.st_coding
+    ability_coding /= len(students)
+    if ability_coding >= 80:
+        level = '우수'
+    elif ability_coding >= 60:
+        level = '보통'
+    elif ability_coding >= 30:
+        level = '쪼렙'
+    else:
+        level = '형편없음'
+
+    if len(students) == 0:
+        print('맙소사 다 탈주하다니...마음의 상처다')
+    elif len(students) == 28:
+        print('모두가 완주했다니!')
+    else:
+        print('12기는 "{left}"명 회원이 "{res}" 실력으로 마무리했다.'.format(left=len(students), res=level))
+    print('고생하셨습니다ㅋㅋ')

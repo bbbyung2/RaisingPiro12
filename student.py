@@ -28,4 +28,4 @@ def escape(students):
     else:
         print('다행히도 이번 주는 탈주한 사람이 없다. 휴')
         time.sleep(1)
-    print('\n12기 남은 인원 - {}명\n'.format(len(students)))
+    print('\n\n')

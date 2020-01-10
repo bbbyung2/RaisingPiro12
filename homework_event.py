@@ -34,6 +34,11 @@ def self_homework(students, fatigue):
         students[i].st_fatigue += fatigue  # fatigue 20 rise
         students[i].st_passion -= 10  # passion 10 down
         students[i].st_humanity -= 10  # humanity 10 down
+    print('''\n
+     ( - __ -) ┌-----┐
+    ___\_____\_|_____|         
+    ''')
+    time.sleep(2)
     print('''\n개인과제로 인해 해당 학생들의 피로도가 %d 상승, 열정이 10 하락, 인류애가 10 하락하였다...
     하지만 코딩능력은 20 상승하였다(얏호)\n''' % fatigue)
 
@@ -50,5 +55,14 @@ def team_homework(students, fatigue):
         students[i].st_fatigue += fatigue  # fatigue 30 rise
         students[i].st_passion -= 15  # passion 15 down
         students[i].st_humanity -= 20  # humanity 20 down
+
+    print('''\n
+       ( 팀플 중...)
+    \●  \●/ ●   ●/ ●
+     |\  | /|\ /| /|\\
+    ---------------------
+    ''')
+    time.sleep(2)
+
     print('''\n팀플과제로 인해 해당 학생들의 피로도가 %d 상승, 열정이 15 하락, 인류애가 20 하락하였다...
     하지만 코딩능력은 40 상승하였다(얏호)\n''' % fatigue)

@@ -6,6 +6,12 @@ import time
 '''1. 학식 2. 배달음식 3. 굶기'''
 
 def lunch(boss, students):
+    print('''
+         ******
+        *      *   ○ ||
+        \------/   | ||
+         \____/
+    ''')
     print('\n오늘 점심은 뭘 먹이지?...')
     while(True):
         print('(1) 학식    (2) 배달    (3) 굶자\n')
@@ -60,6 +66,10 @@ def lunch_no(students):
         students[i].st_fatigue += 5
         count += 1
     time.sleep(1)
+    print('''
+     \(Ｔ▽Ｔ)/ \（ｉДｉ）
+      \|   |/   \|   |  꼬르륵...
+    ''')
     print('학생들: (수근수근...)\n')
     time.sleep(1)
     print('{0}명의 인류애가 -10, 피로가 +5 되었습니다\n\n'.format(count))

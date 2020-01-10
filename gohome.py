@@ -52,7 +52,7 @@ def gohome(boss, students, avg_passion):
         print('회장님의 열정이 5 증가했지만...........!')
         time.sleep(1)
         dec = random.randint(1, 2)
-        for i in len(students):
+        for i in range(len(students)):
           students[i].st_humanity -= 5 * dec
           students[i].st_fatigue += 5 * dec
           students[i].st_passion -= 5 * dec
